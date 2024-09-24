@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity</title>
+    <style>
+      .numTable {
+        width: fit-content;
+        margin: 100px auto;
+        font-size: 30px;
+      }
+      .formMain {
+        max-width: 600px;
+        margin: auto;
+        border: 1px solid black;
+        background-color: aqua;
+        padding: 20px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+      }
+      table {
+        width: 100%;
+        text-align: center;
+      }
+      .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      label {
+        width: 80px;
+        margin-right: 10px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      input[type="text"],
+      input[type="tel"] {
+        height: 20px;
+        padding: 5px;
+        flex: 1;
+        min-width: 0;
+      }
+      .inline-fields {
+        display: flex;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      .inline-fields > div {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        margin-right: 10px;
+      }
+      .inline-fields > div:last-child {
+        margin-right: 0; /* No margin on last item */
+      }
+      .lab {
+        width: auto;
+      }
+
+      #city {
+        width: 70%;
+      }
+      #state {
+        width: 15%;
+      }
+      #zip {
+        width: 15%;
+      }
+      h3 {
+        margin-top: 20px;
+      }
+
+      .toppings,
+      .sizes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 10px;
+        max-width: 80%;
+      }
+
+      .topping-item,
+      .size-item {
+        display: flex;
+        align-items: center;
+        width: 30%;
+        margin-bottom: 10px;
+        white-space: nowrap;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: white;
+        color: black;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: #949494;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="numTable">
+      <table border="1" id="table"></table>
+    </div>
+    <div class="formMain">
+      <form id="orderForm">
+        <h1>My Pizza Cafe</h1>
+
+        <h3>Step 1: Enter your name, address, and phone number:</h3>
+        <div class="form-row">
+          <label for="name">Name: </label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-row">
+          <label for="address">Address: </label>
+          <input type="text" id="address" required />
+        </div>
+        <div class="inline-fields">
+          <div>
+            <label for="city">City: </label>
+            <input type="text" id="city" required />
+          </div>
+          <div>
+            <label for="state" class="lab">State: </label>
+            <input type="text" id="state" maxlength="4" required />
+          </div>
+          <div>
+            <label for="zip" class="lab">Zip: </label>
+            <input type="text" id="zip" maxlength="5" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone: </label>
+          <input type="tel" id="phone" required />
+        </div>
+
+        <h3>Step 2: Select the size of pizza you want:</h3>
+        <div class="sizes">
+          <div class="size-item">
+            <input type="radio" name="size" value="small" id="small" />
+            <label for="small">Small</label>
+          </div>
+          <div class="size-item">
+            <input type="radio" name="size" value="medium" id="medium" />
+            <label for="medium">Medium</label>
+          </div>
+          <div class="size-item">
+            <input type="radio" name="size" value="large" id="large" />
+            <label for="large">Large</label>
+          </div>
+        </div>
+
+        <h3>Step 3: Select the pizza toppings you want:</h3>
+        <div class="toppings">
+          <div class="topping-item">
+            <input type="checkbox" value="pepperoni" id="pepperoni" />
+            <label for="pepperoni">Pepperoni</label>
+          </div>
+          <div class="topping-item">
+            <input type="checkbox" value="sausage" id="sausage" />
+            <label for="sausage">Sausage</label>
+          </div>
+          <div class="topping-item">
+            <input type="checkbox" value="mushrooms" id="mushrooms" />
+            <label for="mushrooms">Mushrooms</label>
+          </div>
+          <div class="topping-item">
+            <input type="checkbox" value="pineapple" id="pineapple" />
+            <label for="pineapple">Pineapple</label>
+          </div>
+          <div class="topping-item">
+            <input type="checkbox" value="black_olive" id="black_olive" />
+            <label for="black_olive">Black Olive</label>
+          </div>
+          <div class="topping-item">
+            <input type="checkbox" value="meatball" id="meatball" />
+            <label for="meatball">Meatball</label>
+          </div>
+        </div>
+        <input type="submit" value="Submit Order" />
+        <input type="reset" value="Clear Entries" />
+      </form>
+    </div>
+
+    <script>
+      const table = document.getElementById("table");
+
+      for (let x = 0; x <= 5; x++) {
+        const row = table.insertRow(x);
+        for (let y = 0; y <= 5; y++) {
+          const data = row.insertCell(y);
+          if (y < x) {
+            data.innerHTML = " ";
+          } else {
+            data.innerHTML = x;
+          }
+        }
+      }
+
+      document
+        .getElementById("orderForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent form from submitting immediately
+
+          let isValid = true;
+
+          const name = document.getElementById("name").value.trim();
+          const address = document.getElementById("address").value.trim();
+          const city = document.getElementById("city").value.trim();
+          const state = document.getElementById("state").value.trim();
+          const zip = document.getElementById("zip").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+
+          // Simple validation
+          if (
+            name === "" ||
+            address === "" ||
+            city === "" ||
+            state === "" ||
+            zip === "" ||
+            phone === ""
+          ) {
+            alert("Please fill out all required fields.");
+            isValid = false;
+          }
+
+          // Additional validations (e.g., phone format)
+          const phonePattern = /^[0-9]{11}$/; // Assumes 10-digit phone numbers
+          if (!phonePattern.test(phone)) {
+            alert("Please enter a valid 11-digit phone number.");
+            isValid = false;
+          }
+
+          const zipPattern = /^[0-9]{5}$/; // Assumes 5-digit zip codes
+          if (!zipPattern.test(zip)) {
+            alert("Please enter a valid 5-digit zip code.");
+            isValid = false;
+          }
+
+          if (isValid) {
+            alert("Order submitted successfully!");
+            // Optionally, submit the form using event.target.submit();
+          }
+        });
+    </script>
+  </body>
+</html>
