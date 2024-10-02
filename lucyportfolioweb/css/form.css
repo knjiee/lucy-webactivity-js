@@ -1,0 +1,47 @@
+fieldset{
+    background-color: hsl(0, 0%, 8%);
+    width: 50%;
+    max-width: 350px;
+    margin:0 auto;
+}
+body{
+    font-family: sans-serif;
+    background-color: hwb(0 16% 84%);
+    color: hsl(0, 0%, 96%);
+   
+}
+legend{
+    font-size: 1.2em;
+}
+input, select, textarea{
+    background-color: rgb(184, 255, 255);
+
+}
+input{
+    margin-bottom: 2px;
+    
+}
+.info{
+   
+    
+    display: flex;
+    flex-direction: column;
+margin-bottom: -20px;
+}
+.eye-pet{
+    display: flex;
+}
+.eye{
+    margin-right: 100px;
+}
+.txt{
+    min-width: 70%;
+    margin-top: 3px;
+    height: 20px;
+}
+input[type="submit"]{
+    height: 30px;
+    margin-top: 20px;
+    width: 100px;
+    border-radius: 5px;
+}

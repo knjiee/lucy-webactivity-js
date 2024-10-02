@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Alert</title>
+</head>
+<body>
+    <div id="myDiv">
+        Red Alert !!!!!!
+        </div>
+
+        <script>
+        var objDiv = document.getElementById("myDiv");
+        var colors = ['white','yellow','orange','red'];
+        var nextColor = 0;
+        setInterval(display,500);
+        
+        function display(){
+            objDiv.style.backgroundColor = colors[nextColor++%colors.length];
+        }
+        </script>
+
+</body>
+</html>

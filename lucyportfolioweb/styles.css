@@ -1,0 +1,279 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Poppins;
+  src: url("fonts/Poppins-Regular.ttf");
+}
+body {
+  font-family: Poppins, sans-serif;
+  background-color: hsl(0, 0%, 16%);
+}
+header {
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  min-width: 200px;
+  padding: 5px;
+  margin-left: 20px;
+}
+.logo img {
+  height: 45px;
+}
+.logo-name {
+  color: hsl(0, 0%, 96%);
+  font-size: 2em;
+}
+.navbar {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  /* border: 2px solid green; */
+  align-items: center;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: hsl(0, 0%, 96%);
+  display: block;
+  margin-right: 10px;
+  text-align: center;
+  padding: 3px 7px;
+}
+.navbar li {
+  margin-left: 10px;
+  font-size: 1.3em;
+
+  /* border: 2px solid blue; */
+  text-align: center;
+}
+.navbar li a:hover {
+  background-color: #007aff;
+  border: none;
+  border-radius: 5px;
+}
+.navbar li a:active {
+  background-color: hsl(211, 100%, 60%);
+}
+.container {
+  background-color: hsl(0, 0%, 12%);
+  width: 85%;
+  min-height: 80vh;
+  max-height: 100vh;
+  height: auto;
+  margin: 50px auto;
+  border-radius: 30px;
+  display: flex;
+  color: hsl(0, 0%, 96%);
+  padding: 70px;
+}
+/* @media (max-width: 1000px){
+  .container{
+    flex-direction: column;
+   
+    border: 2px solid green;
+  }
+  .info{
+    
+    border: 2px solid red;
+    
+  }
+  .pic{
+    display: flex;
+    align-items: flex-end;
+    height: 50vh;
+    border: 2px solid blue;;
+  }
+  .pic img{
+    width: 50%;
+  }
+} */
+
+.info {
+  /* border: 2px solid red; */
+  width: 50%;
+  margin: auto 0;
+  
+}
+.pic {
+  width: 50%;
+  /* border: 2px solid blue; */
+  overflow: hidden;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  height: 80%;
+}
+.pic img {
+  border-radius: 50%;
+  border: 6px solid #007aff;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.info h2 {
+  padding-bottom: 10px;
+  font-size: 1.5em;
+}
+.info h1 {
+  padding-bottom: 10px;
+  font-weight: 700px;
+  font-size: 3em;
+}
+
+.asul {
+  color: #007aff;
+}
+
+button {
+  height: 40px;
+  width: 150px;
+  margin: 20px 10px;
+  background-color: #007aff;
+  color: hsl(0, 0%, 96%);
+  border: none;
+  font-family: Poppins, sans-serif;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:active {
+  background-color: hsl(211, 100%, 70%);
+}
+button:hover {
+  background-color: hsl(211, 100%, 60%);
+}
+.description {
+  color: hsl(0, 0%, 96%);
+  text-align: center;
+  margin: 220px 90px 50px;
+}
+.description h1 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  display: inline-block;
+  border-bottom: 5px solid #007aff;
+  padding-bottom: 5px;
+  width: auto;
+}
+
+.description h1::after {
+  content: "";
+  display: block;
+  margin: 10px auto 0;
+  width: 50px;
+  height: 5px;
+  background-color: #007aff;
+}
+.container-small {
+  background-color: hsl(0, 0%, 12%);
+  width: 70%;
+  height: 80vh;
+  margin: 50px auto;
+  border-radius: 30px;
+  display: flex;
+  color: hsl(0, 0%, 96%);
+  padding: 70px;
+  flex-wrap: wrap;
+}
+.laman {
+  background-color: hsl(0, 0%, 96%);
+  color: hsl(0, 0%, 8%);
+
+  height: 60px;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+}
+.laman p {
+  font-size: 1em;
+}
+
+#perInfo .description {
+  text-align: left;
+  padding-left: 150px;
+
+  margin-bottom: 0;
+}
+.details {
+  color: hsl(0, 0%, 96%);
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+.details-left {
+  font-size: 1.2em;
+}
+.details-left p {
+  margin-bottom: 10px;
+}
+
+.details-left a {
+  text-decoration: none;
+  color: hsl(0, 0%, 96%);
+}
+
+#practices .container-small {
+  display: block;
+}
+
+#practices .container-small .laman {
+  display: block;
+  width: 300px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#practices .container-small .laman a {
+  color: hsl(0, 0%, 8%);
+  text-decoration: none;
+}
+#practices .container-small p {
+  text-indent: 100px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #007aff;
+  padding-bottom: 10px;
+}
+
+footer {
+  margin-top: 200px;
+  background-color: hsl(0, 0%, 8%);
+  display: flex;
+  justify-content: center;
+}
+
+footer,
+footer a {
+  color: hsl(0, 0%, 96%);
+}
+
+address {
+  text-align: center;
+  padding: 0.3em;
+}
+.laman:hover{
+  background-color: hsl(0, 0%, 86%);
+}
+.laman:active{
+  background-color: hsl(0, 0%, 100%);
+}

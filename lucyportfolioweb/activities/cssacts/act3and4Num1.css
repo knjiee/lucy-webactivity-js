@@ -1,0 +1,5 @@
+#text {
+    color: red;
+    font-size: 10pt;
+    transition: font-size 0.1s; 
+}

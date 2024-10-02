@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/form.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Introduce Yourself</legend>
+        <form action="process.php" method="post">
+            <div class="info">
+                First Name <input type="text" size="20" name="firstname" class="txt" placeholder="Enter your Name"/><br />
+                Last Name  <input type="text" size="30" name="lastname" class="txt" placeholder="Enter your Email"/><br />
+                Age        <input type="number" name="age" class="txt" placeholder="Enter your age"><br><br>
+            </div>
+            <div class="eye-pet">
+                <div class="eye">
+                    Eye Color:<br />
+                    <input type="radio" name="eye" value="brown" />Brown<br />
+                    <input type="radio" name="eye" value="blue" />Blue<br />
+                    <input type="radio" name="eye" value="green" />Green<br />
+                    <input type="radio" name="eye" value="other" />Other<br /><br>
+                </div>
+                <div class="pet">
+                    My Pets:<br />
+                    <input type="checkbox" name="pets" value="dog" />Dog<br />
+                    <input type="checkbox" name="pets" value="cat" />Cat<br />
+                    <input type="checkbox" name="pets" value="hamster" />Hamster<br />
+                    <input type="checkbox" name="pets" value="fish" />Fish<br /><br>
+                </div>
+            </div>
+            Foreign Languages Spoken:<br />
+            <select name="language">
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="japanese">Japanese</option>
+                <option value="arabic">Arabic</option>
+            </select><br><br>
+            Tell us some more about yourself:<br />
+            <textarea name="more" rows="8" cols="30">
+            Type here.
+            </textarea><br>
+            <input type="submit" value="All Done!" />
+        </form>
+        
+    </fieldset>
+</body>
+</html>

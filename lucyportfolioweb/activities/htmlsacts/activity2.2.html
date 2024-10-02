@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2.2</title>
+    <link rel="stylesheet" href="../cssacts/act2.css">
+</head>
+<body>
+    
+      <div class="formMain">
+        <form id="orderForm">
+          <h1>My Pizza Cafe</h1>
+  
+          <h3>Step 1: Enter your name, address, and phone number:</h3>
+          <div class="form-row">
+            <label for="name">Name: </label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-row">
+            <label for="address">Address: </label>
+            <input type="text" id="address" required />
+          </div>
+          <div class="inline-fields">
+            <div>
+              <label for="city">City: </label>
+              <input type="text" id="city" required />
+            </div>
+            <div>
+              <label for="state" class="lab">State: </label>
+              <input type="text" id="state" maxlength="4" required />
+            </div>
+            <div>
+              <label for="zip" class="lab">Zip: </label>
+              <input type="text" id="zip" maxlength="5" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" required />
+          </div>
+  
+          <h3>Step 2: Select the size of pizza you want:</h3>
+          <div class="sizes">
+            <div class="size-item">
+              <input type="radio" name="size" value="small" id="small" />
+              <label for="small">Small</label>
+            </div>
+            <div class="size-item">
+              <input type="radio" name="size" value="medium" id="medium" />
+              <label for="medium">Medium</label>
+            </div>
+            <div class="size-item">
+              <input type="radio" name="size" value="large" id="large" />
+              <label for="large">Large</label>
+            </div>
+          </div>
+  
+          <h3>Step 3: Select the pizza toppings you want:</h3>
+          <div class="toppings">
+            <div class="topping-item">
+              <input type="checkbox" value="pepperoni" id="pepperoni" />
+              <label for="pepperoni">Pepperoni</label>
+            </div>
+            <div class="topping-item">
+              <input type="checkbox" value="sausage" id="sausage" />
+              <label for="sausage">Sausage</label>
+            </div>
+            <div class="topping-item">
+              <input type="checkbox" value="mushrooms" id="mushrooms" />
+              <label for="mushrooms">Mushrooms</label>
+            </div>
+            <div class="topping-item">
+              <input type="checkbox" value="pineapple" id="pineapple" />
+              <label for="pineapple">Pineapple</label>
+            </div>
+            <div class="topping-item">
+              <input type="checkbox" value="black_olive" id="black_olive" />
+              <label for="black_olive">Black Olive</label>
+            </div>
+            <div class="topping-item">
+              <input type="checkbox" value="meatball" id="meatball" />
+              <label for="meatball">Meatball</label>
+            </div>
+          </div>
+          <input type="submit" value="Submit Order" />
+          <input type="reset" value="Clear Entries" />
+        </form>
+      </div>
+    <script src="../jsacts/act2.js">
+        
+    </script>
+</body>
+</html>

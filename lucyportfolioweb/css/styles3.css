@@ -1,0 +1,73 @@
+body{
+    background-image: url(../images/ccclogo.png);
+    background-repeat: repeat-x;
+    background-size: 100px;
+    background-position: unset;
+}
+
+.button{
+    display: flex;
+    border: 2px solid rgb(78, 78, 251);
+    padding: 5px 10px;
+    width: 200px;
+    justify-content: center;
+    margin: 10px;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#click:active{
+    background-color: white;
+    color: black;
+}
+#click:hover{
+    background-color: hsl(0, 0%, 34%);
+}
+#hover:hover{
+    background-color: rgb(39, 172, 255);
+    
+}
+/* Basic reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* Style the interactive div */
+.interactive-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect */
+.interactive-div:hover {
+    background-color: #2980b9;
+}
+
+/* Click effect */
+.interactive-div:active {
+    transform: scale(0.95);
+}
+
+/* Optional focus effect for accessibility */
+.interactive-div:focus {
+    outline: 2px solid #f39c12;
+}
